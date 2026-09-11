@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Youyuan Tang (唐友源) — Ph.D. student at Hunan University. Research interests: point cloud semantic segmentation, open-vocabulary 3D scene understanding, open-world perception, and embodied perception." />
+  <meta name="author" content="Youyuan Tang" />
+  <title>Youyuan Tang (唐友源) | Academic Homepage</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --surface: #f8fafc;
+      --text: #1f2937;
+      --muted: #64748b;
+      --line: #e5e7eb;
+      --accent: #2563eb;
+      --accent-soft: #eff6ff;
+      --maxw: 1180px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.75;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(255,255,255,.94);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 0 22px;
+      min-height: 66px;
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+    .brand {
+      font-weight: 750;
+      font-size: 1.08rem;
+      color: #0f172a;
+      white-space: nowrap;
+      margin-right: auto;
+    }
+    .navlinks { display: flex; gap: 20px; align-items: center; }
+    .navlinks a { color: #334155; font-size: .95rem; }
+    .lang-switch {
+      border: 1px solid var(--line);
+      background: #fff;
+      border-radius: 999px;
+      padding: 6px 10px;
+      font-weight: 650;
+      color: #334155;
+      cursor: pointer;
+    }
+    .layout {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 54px 22px 80px;
+      display: grid;
+      grid-template-columns: 270px minmax(0,1fr);
+      gap: 58px;
+    }
+    .sidebar { position: sticky; top: 104px; align-self: start; }
+    .avatar {
+      width: 168px;
+      height: 168px;
+      border-radius: 50%;
+      border: 1px solid var(--line);
+      background: linear-gradient(145deg, #f1f5f9, #e2e8f0);
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      color: #94a3b8;
+      font-size: 3.2rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+    .avatar img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .name { font-size: 1.6rem; font-weight: 780; margin: 0 0 4px; color: #0f172a; }
+    .role { color: var(--muted); margin: 0 0 18px; font-size: .98rem; }
+    .meta { display: grid; gap: 8px; font-size: .94rem; }
+    .meta a, .meta span { color: #475569; }
+    .meta .disabled { color: #94a3b8; cursor: default; }
+    main { min-width: 0; }
+    section { scroll-margin-top: 90px; margin-bottom: 54px; }
+    h1 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      line-height: 1.15;
+      margin: 0 0 14px;
+      letter-spacing: -.03em;
+      color: #0f172a;
+    }
+    .subtitle { font-size: 1.14rem; color: #475569; margin: 0 0 22px; }
+    h2 {
+      font-size: 1.45rem;
+      margin: 0 0 18px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--line);
+      color: #0f172a;
+    }
+    p { margin: 0 0 14px; }
+    .chips { display: flex; flex-wrap: wrap; gap: 10px; }
+    .chip {
+      display: inline-block;
+      padding: 7px 12px;
+      border: 1px solid #dbeafe;
+      background: var(--accent-soft);
+      color: #1d4ed8;
+      border-radius: 999px;
+      font-size: .92rem;
+    }
+    .paper {
+      padding: 20px 0 22px;
+      border-bottom: 1px solid var(--line);
+    }
+    .paper:last-child { border-bottom: 0; }
+    .paper-title { font-weight: 760; font-size: 1.06rem; color: #111827; margin-bottom: 5px; }
+    .authors { color: #475569; margin-bottom: 4px; }
+    .venue { color: #64748b; font-style: italic; margin-bottom: 8px; }
+    .tag {
+      display: inline-block;
+      margin-right: 8px;
+      padding: 3px 8px;
+      border-radius: 5px;
+      border: 1px solid #bfdbfe;
+      background: #eff6ff;
+      color: #1d4ed8;
+      font-size: .82rem;
+      font-weight: 700;
+    }
+    .links a { margin-right: 12px; font-size: .93rem; }
+    .edu {
+      border-left: 3px solid #dbeafe;
+      padding-left: 18px;
+    }
+    .edu-title { font-weight: 760; font-size: 1.05rem; }
+    .edu-sub { color: #475569; }
+    footer {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 28px 22px 44px;
+      border-top: 1px solid var(--line);
+      color: #94a3b8;
+      font-size: .88rem;
+      text-align: center;
+    }
+    [data-lang] { display: none; }
+    body.lang-zh [data-lang="zh"], body.lang-en [data-lang="en"] { display: initial; }
+    body.lang-zh div[data-lang="zh"], body.lang-en div[data-lang="en"],
+    body.lang-zh section[data-lang="zh"], body.lang-en section[data-lang="en"],
+    body.lang-zh p[data-lang="zh"], body.lang-en p[data-lang="en"] { display: block; }
+    @media (max-width: 900px) {
+      .navlinks { display: none; }
+      .layout { grid-template-columns: 1fr; gap: 34px; padding-top: 34px; }
+      .sidebar { position: static; display: grid; grid-template-columns: 130px 1fr; column-gap: 20px; align-items: center; }
+      .avatar { width: 120px; height: 120px; margin: 0; }
+      .side-content { min-width: 0; }
+    }
+    @media (max-width: 540px) {
+      .sidebar { grid-template-columns: 1fr; }
+      .avatar { width: 112px; height: 112px; margin-bottom: 14px; }
+      .brand { font-size: .98rem; }
+      .nav { gap: 10px; }
+      .layout { padding-left: 18px; padding-right: 18px; }
+    }
+  </style>
+</head>
+<body class="lang-zh">
+  <header class="topbar">
+    <nav class="nav">
+      <a class="brand" href="#home">Youyuan Tang · 唐友源</a>
+      <div class="navlinks">
+        <a href="#about"><span data-lang="zh">关于我</span><span data-lang="en">About</span></a>
+        <a href="#research"><span data-lang="zh">研究方向</span><span data-lang="en">Research</span></a>
+        <a href="#publications"><span data-lang="zh">论文</span><span data-lang="en">Publications</span></a>
+        <a href="#education"><span data-lang="zh">教育经历</span><span data-lang="en">Education</span></a>
+        <a href="#contact"><span data-lang="zh">联系方式</span><span data-lang="en">Contact</span></a>
+      </div>
+      <button class="lang-switch" id="langBtn" aria-label="Switch language">EN</button>
+    </nav>
+  </header>
+
+  <div class="layout" id="home">
+    <aside class="sidebar">
+      <div class="avatar" title="Replace assets/profile.jpg with your personal photo">
+        <img src="assets/profile.jpg" alt="Youyuan Tang" onerror="this.style.display='none'; this.parentElement.textContent='YT';" />
+      </div>
+      <div class="side-content">
+        <h3 class="name"><span data-lang="zh">唐友源</span><span data-lang="en">Youyuan Tang</span></h3>
+        <p class="role">
+          <span data-lang="zh">博士研究生 · 三维计算机视觉与具身感知</span>
+          <span data-lang="en">Ph.D. Student · 3D Computer Vision & Embodied Perception</span>
+        </p>
+        <div class="meta">
+          <span>📍 <span data-lang="zh">湖南大学 · 长沙</span><span data-lang="en">Hunan University · Changsha</span></span>
+          <a href="mailto:tangyouyuan@hnu.edu.cn">✉️ tangyouyuan@hnu.edu.cn</a>
+          <a href="https://github.com/Youyuan287" target="_blank" rel="noopener">💻 GitHub</a>
+          <span class="disabled" title="Add your Google Scholar URL here">🎓 Google Scholar · <span data-lang="zh">待补链接</span><span data-lang="en">URL pending</span></span>
+        </div>
+      </div>
+    </aside>
+
+    <main>
+      <section id="about">
+        <h1><span data-lang="zh">唐友源</span><span data-lang="en">Youyuan Tang</span></h1>
+        <p class="subtitle">
+          <span data-lang="zh">湖南大学人工智能与机器人学院 · 电子信息博士研究生</span>
+          <span data-lang="en">Ph.D. Student in Electronic Information · School of Robotics and Artificial Intelligence, Hunan University</span>
+        </p>
+
+        <div data-lang="zh">
+          <p>你好！我是<strong>唐友源</strong>，现为<strong>湖南大学人工智能与机器人学院</strong>电子信息博士研究生，导师为<strong>张辉教授</strong>。</p>
+          <p>我的研究主要围绕<strong>三维计算机视觉与智能感知</strong>展开，当前关注点云语义分割、开放词汇三维场景理解、开放世界感知与具身感知等方向，致力于研究面向复杂真实环境的鲁棒、可泛化三维感知方法。</p>
+          <p>欢迎通过邮件与我进行学术交流与合作。</p>
+        </div>
+
+        <div data-lang="en">
+          <p>Hi! I am <strong>Youyuan Tang (唐友源)</strong>, currently a Ph.D. student in Electronic Information at the <strong>School of Robotics and Artificial Intelligence, Hunan University</strong>, supervised by <strong>Prof. Hui Zhang</strong>.</p>
+          <p>My research focuses on <strong>3D computer vision and intelligent perception</strong>, with particular interests in point cloud semantic segmentation, open-vocabulary 3D scene understanding, open-world perception, and embodied perception. I am interested in developing robust and generalizable 3D perception methods for complex real-world environments.</p>
+          <p>Feel free to contact me for academic discussion and collaboration.</p>
+        </div>
+      </section>
+
+      <section id="research">
+        <h2><span data-lang="zh">研究方向</span><span data-lang="en">Research Interests</span></h2>
+        <div class="chips" data-lang="zh">
+          <span class="chip">点云语义分割</span>
+          <span class="chip">开放词汇三维场景理解</span>
+          <span class="chip">开放世界感知</span>
+          <span class="chip">具身感知</span>
+          <span class="chip">三维计算机视觉</span>
+        </div>
+        <div class="chips" data-lang="en">
+          <span class="chip">Point Cloud Semantic Segmentation</span>
+          <span class="chip">Open-Vocabulary 3D Scene Understanding</span>
+          <span class="chip">Open-World Perception</span>
+          <span class="chip">Embodied Perception</span>
+          <span class="chip">3D Computer Vision</span>
+        </div>
+      </section>
+
+      <section id="publications">
+        <h2><span data-lang="zh">论文发表</span><span data-lang="en">Publications</span></h2>
+
+        <article class="paper">
+          <div class="paper-title">SAF: A Structure-Aware Framework for Radial Ice Thickness Detection on Overhead Transmission Lines</div>
+          <div class="authors">Hui Zhang, <strong>Youyuan Tang</strong>, Rui Du, Yihong Cao, Kaining Zhang, Yunkang Cao, Tongzhi Niu, Jianxu Mao, Yaonan Wang</div>
+          <div class="venue">IEEE Transactions on Industrial Informatics, 2026.</div>
+          <div class="links">
+            <span class="tag">TII</span>
+            <a href="https://doi.org/10.1109/TII.2026.3659628" target="_blank" rel="noopener">DOI</a>
+          </div>
+        </article>
+
+        <article class="paper">
+          <div class="paper-title">
+            <span data-lang="zh">基于结构频谱感知框架的配电网点云语义分割</span>
+            <span data-lang="en">Semantic Segmentation of Distribution Network Point Clouds Based on a Structure Spectrum-Aware Framework</span>
+          </div>
+          <div class="authors">
+            <span data-lang="zh"><strong>唐友源</strong>, 张辉, 杜瑞, 张恺宁, 曹云康, 别克扎提·巴合提, 陈厚权, 王耀南</span>
+            <span data-lang="en"><strong>Youyuan Tang</strong>, Hui Zhang, Rui Du, Kaining Zhang, Yunkang Cao, Biekezati Baheti, Houquan Chen, Yaonan Wang</span>
+          </div>
+          <div class="venue">
+            <span data-lang="zh">《自动化学报》, 2026, 52(4): 833–845.</span>
+            <span data-lang="en">Acta Automatica Sinica, 2026, 52(4): 833–845.</span>
+          </div>
+          <div class="links">
+            <span class="tag"><span data-lang="zh">自动化学报</span><span data-lang="en">AAS</span></span>
+            <a href="https://www.aas.net.cn/cn/article/doi/10.16383/j.aas.c250540?viewType=HTML" target="_blank" rel="noopener"><span data-lang="zh">论文</span><span data-lang="en">Paper</span></a>
+            <a href="https://doi.org/10.16383/j.aas.c250540" target="_blank" rel="noopener">DOI</a>
+          </div>
+        </article>
+      </section>
+
+      <section id="education">
+        <h2><span data-lang="zh">教育经历</span><span data-lang="en">Education</span></h2>
+        <div class="edu" data-lang="zh">
+          <div class="edu-title">湖南大学 · 博士研究生</div>
+          <div class="edu-sub">人工智能与机器人学院 · 电子信息</div>
+          <div class="edu-sub">2026 — 至今</div>
+          <div class="edu-sub">导师：张辉教授</div>
+        </div>
+        <div class="edu" data-lang="en">
+          <div class="edu-title">Hunan University · Ph.D. Student</div>
+          <div class="edu-sub">School of Robotics and Artificial Intelligence · Electronic Information</div>
+          <div class="edu-sub">2026 — Present</div>
+          <div class="edu-sub">Supervisor: Prof. Hui Zhang</div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <h2><span data-lang="zh">联系方式</span><span data-lang="en">Contact</span></h2>
+        <div data-lang="zh">
+          <p><strong>唐友源</strong></p>
+          <p>湖南大学人工智能与机器人学院<br />中国 · 湖南 · 长沙</p>
+          <p>邮箱：<a href="mailto:tangyouyuan@hnu.edu.cn">tangyouyuan@hnu.edu.cn</a><br />GitHub：<a href="https://github.com/Youyuan287" target="_blank" rel="noopener">Youyuan287</a><br />Google Scholar：待补充主页链接</p>
+        </div>
+        <div data-lang="en">
+          <p><strong>Youyuan Tang</strong></p>
+          <p>School of Robotics and Artificial Intelligence, Hunan University<br />Changsha, Hunan, China</p>
+          <p>Email: <a href="mailto:tangyouyuan@hnu.edu.cn">tangyouyuan@hnu.edu.cn</a><br />GitHub: <a href="https://github.com/Youyuan287" target="_blank" rel="noopener">Youyuan287</a><br />Google Scholar: URL to be added</p>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <span data-lang="zh">© 2026 唐友源 · 最后更新：2026年9月</span>
+    <span data-lang="en">© 2026 Youyuan Tang · Last updated: September 2026</span>
+  </footer>
+
+  <script>
+    const btn = document.getElementById('langBtn');
+    const saved = localStorage.getItem('preferredLang');
+    if (saved === 'en') setLang('en');
+    else setLang('zh');
+
+    btn.addEventListener('click', () => {
+      const next = document.body.classList.contains('lang-zh') ? 'en' : 'zh';
+      setLang(next);
+    });
+
+    function setLang(lang) {
+      document.body.classList.remove('lang-zh', 'lang-en');
+      document.body.classList.add('lang-' + lang);
+      document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+      btn.textContent = lang === 'zh' ? 'EN' : '中文';
+      localStorage.setItem('preferredLang', lang);
+      document.title = lang === 'zh'
+        ? '唐友源 | 个人学术主页'
+        : 'Youyuan Tang | Academic Homepage';
+    }
+  </script>
+</body>
+</html>
