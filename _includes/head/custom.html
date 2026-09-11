@@ -1,2 +1,106 @@
 <meta name="theme-color" content="#ffffff">
 <link rel="stylesheet" href="assets/css/academicons.css"/>
+
+<style>
+html:not([data-lang="en"]) .lang-en {
+  display: none !important;
+}
+
+html[data-lang="en"] .lang-zh {
+  display: none !important;
+}
+
+.profile-lead {
+  border-left: 4px solid #365f91;
+  margin: 0.8rem 0 1rem;
+  padding: 0.1rem 0 0.1rem 1rem;
+}
+
+.role-line {
+  font-weight: 700;
+  margin: 0 0 0.3rem;
+}
+
+.role-line i,
+.profile-meta i,
+.profile-links i,
+.quick-nav i,
+.section-icon {
+  color: #365f91;
+  margin-right: 0.35rem;
+}
+
+.role-line.cn {
+  color: #38485c;
+}
+
+.profile-meta {
+  display: grid;
+  gap: 0.25rem;
+  margin: 0.75rem 0;
+}
+
+.profile-meta span {
+  align-items: baseline;
+  display: flex;
+  line-height: 1.55;
+}
+
+.profile-meta i {
+  flex: 0 0 1.15rem;
+  text-align: center;
+}
+
+.profile-links,
+.quick-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.language-toggle {
+  display: flex;
+  gap: 0.35rem;
+  justify-content: flex-end;
+  margin: 0.85rem 0 0.7rem;
+}
+
+.language-toggle button {
+  background: #fff;
+  border: 1px solid #d8e1ed;
+  border-radius: 999px;
+  color: #365f91;
+  cursor: pointer;
+  font-size: 0.86rem;
+  font-weight: 700;
+  line-height: 1;
+  padding: 0.42rem 0.75rem;
+}
+
+.language-toggle button.is-active {
+  background: #365f91;
+  border-color: #365f91;
+  color: #fff;
+}
+
+.profile-links a,
+.quick-nav a {
+  align-items: center;
+  border: 1px solid #d8e1ed;
+  border-radius: 6px;
+  display: inline-flex;
+  line-height: 1.2;
+  padding: 0.36rem 0.55rem;
+  text-decoration: none;
+}
+
+.profile-links a:hover,
+.quick-nav a:hover {
+  background: #f4f7fb;
+}
+
+.section-icon {
+  display: inline-block;
+  width: 1.2rem;
+}
+</style>

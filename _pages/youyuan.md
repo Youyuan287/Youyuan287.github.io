@@ -36,10 +36,18 @@ author_profile: true
 <script>
 (function () {
   var root = document.documentElement;
+  var navLabels = {
+    "#research": { zh: "研究方向", en: "Research" },
+    "#publications": { zh: "代表论文", en: "Publications" }
+  };
   function setLanguage(lang) {
     var next = lang === "en" ? "en" : "zh";
     root.setAttribute("data-lang", next);
     root.setAttribute("lang", next === "en" ? "en" : "zh-CN");
+    document.querySelectorAll(".masthead a[href]").forEach(function (link) {
+      var labels = navLabels[link.getAttribute("href")];
+      if (labels) link.textContent = labels[next];
+    });
     document.querySelectorAll("[data-lang-switch]").forEach(function (button) {
       var active = button.getAttribute("data-lang-switch") === next;
       button.classList.toggle("is-active", active);
